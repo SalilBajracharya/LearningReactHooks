@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 
+function InitialCount(){
+  console.log("This runs everytime !");
+  return 0;
+}
+
 function App() {
-  const [count, setCount] = useState(() => {
-    console.log("This runs once");
-    return 0;
-  });
+  const [count, setCount] = useState(InitialCount());
 
   function decrementCount(){
     setCount((prevCount) => prevCount-1);
